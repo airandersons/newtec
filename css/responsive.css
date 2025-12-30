@@ -1,0 +1,216 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-content .container {
+        padding: 0 40px;
+    }
+    
+    .cells-grid {
+        gap: 2rem;
+    }
+    
+    .sermon-container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .church-name {
+        font-size: 3rem;
+    }
+    
+    .identity-line {
+        font-size: 1.5rem;
+    }
+    
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .sermon-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cells-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .times-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .hero {
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .header .container {
+        padding: 0 15px;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .main-nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        z-index: 100;
+        gap: 1rem;
+    }
+    
+    .main-nav ul.active {
+        display: flex;
+    }
+    
+    .main-nav a {
+        display: block;
+        padding: 0.8rem 0;
+    }
+    
+    .hero {
+        min-height: 700px;
+    }
+    
+    .hero-background {
+        background-attachment: scroll;
+    }
+    
+    .church-name {
+        font-size: 2.5rem;
+    }
+    
+    .identity-line {
+        font-size: 1.3rem;
+    }
+    
+    .years-badge {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.5rem;
+    }
+    
+    .years-badge span {
+        font-size: 1.8rem;
+    }
+    
+    .times-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        justify-content: center;
+    }
+    
+    .cells-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    
+    .visit-map-container {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        min-height: 600px;
+        height: auto;
+        margin-top: 60px;
+    }
+    
+    .hero-content {
+        padding: 40px 0 60px;
+    }
+    
+    .church-name {
+        font-size: 2rem;
+    }
+    
+    .identity-line {
+        font-size: 1.1rem;
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .intro, .sermon-section, .cells-section, .visit-section {
+        padding: 4rem 0;
+    }
+    
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-brand {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.1rem;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile menu animation */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
