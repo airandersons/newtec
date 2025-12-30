@@ -1233,3 +1233,50 @@ a {
     box-shadow: var(--shadow);
     font-size: 1.1rem;
                                 }
+
+
+/* Hero Section - Fixed hero section spacing */
+.hero {
+    height: 100vh;
+    min-height: 800px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px; /* Add margin to account for fixed header */
+}
+
+.hero-background {
+    position: absolute;
+    top: -70px; /* Move background up to fill the gap */
+    left: 0;
+    width: 100%;
+    height: calc(100% + 70px); /* Extend height to cover the margin */
+    background-image: url('../images/church-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: -70px; /* Match the background position */
+    left: 0;
+    width: 100%;
+    height: calc(100% + 70px); /* Extend to match background */
+    background: linear-gradient(135deg, rgba(26, 77, 140, 0.85) 0%, rgba(13, 58, 110, 0.9) 100%);
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.hero-text {
+    max-width: 850px;
+    width: 100%;
+    padding-top: 70px; /* Add padding to push content down below header */
+}
