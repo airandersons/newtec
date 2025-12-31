@@ -214,3 +214,121 @@
 .mobile-menu-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
 }
+
+
+/* About Page Responsive Styles */
+
+@media (max-width: 992px) {
+    .about-title {
+        font-size: 3rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 70px);
+        left: 70px !important;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        left: -90px;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .years-badge {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.8rem;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 50px);
+        left: 50px !important;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-year {
+        left: -70px;
+        font-size: 1rem;
+        padding: 0.4rem 1.2rem;
+    }
+    
+    .beliefs-grid,
+    .leadership-grid,
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1rem;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 30px);
+        left: 30px !important;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(even) .timetime-year {
+        left: -60px;
+        font-size: 0.9rem;
+        padding: 0.3rem 1rem;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stat .stat-number {
+        font-size: 2.8rem;
+    }
+    
+    .mission-card {
+        padding: 1.8rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    }
