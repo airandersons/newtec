@@ -230,49 +230,6 @@ window.addEventListener('resize', () => {
 
 // About Page Specific JavaScript
 
-// Mobile menu functionality (same as home page)
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mainNav = document.querySelector('.main-nav ul');
-
-if (mobileMenuBtn && mainNav) {
-    mobileMenuBtn.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-        mobileMenuBtn.classList.toggle('active');
-    });
-}
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (event) => {
-    if (mainNav && mobileMenuBtn && !mainNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-        mainNav.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
-    }
-});
-
-// Stats counter animation for impact section
-function animateStats() {
-    const statNumbers = document.querySelectorAll('.stat-number[data-count]');
-    
-    statNumbers.forEach(stat => {
-        const target = Number(stat.dataset.count);
-        let current = 0;
-        const increment = target / 60;
-        const duration = 1500; // 1.5 seconds
-        const stepTime = duration / 60;
-
-        const timer = setInterval(() => {
-            current += increment;
-            
-            if (current >= target) {
-                stat.textContent = target;
-                clearInterval(timer);
-            } else {
-                stat.textContent = Math.floor(current);
-            }
-        }, stepTime);
-    });
-}
-
 // Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.2,
