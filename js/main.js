@@ -226,3 +226,184 @@ window.addEventListener('resize', () => {
         if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
     }
 });
+
+
+// About Page Specific JavaScript
+
+// Mobile menu functionality (same as home page)
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mainNav = document.querySelector('.main-nav ul');
+
+if (mobileMenuBtn && mainNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (event) => {
+    if (mainNav && mobileMenuBtn && !mainNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+        mainNav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+    }
+});
+
+// Stats counter animation for impact section
+function animateStats() {
+    const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+    
+    statNumbers.forEach(stat => {
+        const target = Number(stat.dataset.count);
+        let current = 0;
+        const increment = target / 60;
+        const duration = 1500; // 1.5 seconds
+        const stepTime = duration / 60;
+
+        const timer = setInterval(() => {
+            current += increment;
+            
+            if (current >= target) {
+                stat.textContent = target;
+                clearInterval(timer);
+            } else {
+                stat.textContent = Math.floor(current);
+            }
+        }, stepTime);
+    });
+}
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const element = entry.target;
+            
+            // Add animation class based on existing animation class
+            if (element.classList.contains('animate-fade-up')) {
+                element.style.animationPlayState = 'running';
+            }
+            
+            // Trigger stats animation if it's the impact stats
+            if (element.classList.contains('impact-stats')) {
+                animateStats();
+            }
+        }
+    });
+}, observerOptions);
+
+// Observe all animated elements
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('[class*="animate-"]');
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || targetId === '#contact') return;
+            
+            e.preventDefault();
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Close mobile menu if open
+                if (mainNav) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                }
+                
+                // Calculate scroll position
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const formData = new FormData(this);
+            let isValid = true;
+            
+            this.querySelectorAll('[required]').forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'var(--accent)';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (isValid) {
+                // In a real implementation, you would send this data to a server
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    }
+    
+    // Newsletter form handling
+    const newsletterForms = document.querySelectorAll('.newsletter-form');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing to our updates!');
+                this.reset();
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    });
+    
+    // Social media links (real Facebook link from your request)
+    const facebookLink = document.querySelector('a[href*="facebook.com"]');
+    if (facebookLink && !facebookLink.getAttribute('href').includes('EvangelicalKitintale')) {
+        facebookLink.href = 'https://www.facebook.com/EvangelicalKitintale';
+    }
+});
+
+// Add hover effects to cards
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.belief-card, .leader-card, .project-card, .mission-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    // Close mobile menu on resize to larger screens
+    if (window.innerWidth > 768 && mainNav) {
+        mainNav.classList.remove('active');
+        if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
+    }
+});
