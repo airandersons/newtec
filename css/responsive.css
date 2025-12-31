@@ -332,3 +332,125 @@
         padding: 1.5rem;
     }
     }
+
+
+/* Ministries Page Responsive Styles */
+@media (max-width: 1200px) {
+    .ministries-grid {
+        gap: 2rem;
+    }
+    
+    .specialized-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .involved-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .ministries-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .spotlight-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ministries-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .ministries-hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .ministry-stats {
+        gap: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .ministries-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .specialized-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .involved-steps {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .step {
+        padding: 2rem 1.5rem;
+    }
+    
+    .spotlight-content,
+    .contact-box {
+        padding: 2rem;
+    }
+    
+    .impact-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .ministries-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .ministry-stats {
+        gap: 1.5rem;
+    }
+    
+    .stat {
+        flex: 1;
+        min-width: 100px;
+    }
+    
+    .ministry-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .ministry-content {
+        padding: 1.5rem;
+    }
+    
+    .impact-stats {
+        gap: 1.5rem;
+    }
+    
+    .impact-number {
+        font-size: 2rem;
+    }
+        }
