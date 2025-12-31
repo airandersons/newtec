@@ -45,25 +45,46 @@ if (thumbnails && galleryImg) {
     });
 }
 
-// Animate stats counter
 function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
-    
+
     statNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute('data-count'));
-        const increment = target / 50;
+        const target = Number(stat.dataset.count);
         let current = 0;
-        
+        const increment = target / 60;
+
         const timer = setInterval(() => {
             current += increment;
+
             if (current >= target) {
-                current = target;
+                stat.textContent = target;
                 clearInterval(timer);
+            } else {
+                stat.textContent = Math.floor(current);
             }
-            stat.textContent = Math.floor(current);
-        }, 30);
+        }, 25);
     });
 }
+
+// Scroll trigger
+document.addEventListener("DOMContentLoaded", () => {
+    const statsSection = document.querySelector('#stats');
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                animateStats();
+                hasAnimated = true;
+                observer.unobserve(statsSection);
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+
+    observer.observe(statsSection);
+});
 
 // Check if element is in viewport
 function isInViewport(element) {
