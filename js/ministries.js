@@ -1,0 +1,362 @@
+// Ministries Page JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate ministry stats on hero section
+    animateMinistryStats();
+    
+    // Initialize ministry cards animation
+    initMinistryCards();
+    
+    // Handle ministry interest form submission
+    handleMinistryForm();
+    
+    // Add scroll animations for ministries page
+    initMinistryAnimations();
+});
+
+// Animate the ministry statistics counters
+function animateMinistryStats() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    statNumbers.forEach(stat => {
+        const target = Number(stat.dataset.count);
+        let current = 0;
+        const increment = target / 60;
+        const delay = Math.random() * 500; // Stagger animations
+        
+        setTimeout(() => {
+            const timer = setInterval(() => {
+                current += increment;
+                
+                if (current >= target) {
+                    stat.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    stat.textContent = Math.floor(current);
+                }
+            }, 25);
+        }, delay);
+    });
+}
+
+// Add hover effects and animations to ministry cards
+function initMinistryCards() {
+    const ministryCards = document.querySelectorAll('.ministry-card');
+    
+    ministryCards.forEach(card => {
+        // Add hover effect for images
+        const ministryImage = card.querySelector('.ministry-image');
+        if (ministryImage) {
+            card.addEventListener('mouseenter', () => {
+                ministryImage.style.transform = 'scale(1.05)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                ministryImage.style.transform = 'scale(1)';
+            });
+        }
+        
+        // Add click effect for join buttons
+        const joinButton = card.querySelector('.ministry-btn');
+        if (joinButton) {
+            joinButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const ministryName = card.querySelector('h3').textContent;
+                showMinistryModal(ministryName);
+            });
+        }
+    });
+}
+
+// Show modal when clicking join ministry button
+function showMinistryModal(ministryName) {
+    // Create modal HTML
+    const modalHTML = `
+        <div class="ministry-modal" id="ministryModal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Join ${ministryName}</h3>
+                <p>Thank you for your interest in joining our ${ministryName}!</p>
+                <p>Our ministry leader will contact you within 24-48 hours with more information about getting started.</p>
+                
+                <div class="modal-form">
+                    <input type="text" placeholder="Your Name" id="modalName">
+                    <input type="email" placeholder="Email Address" id="modalEmail">
+                    <input type="tel" placeholder="Phone Number" id="modalPhone">
+                    <textarea placeholder="Any specific questions or comments?" rows="3" id="modalMessage"></textarea>
+                    <button class="btn btn-primary" id="modalSubmit">Submit Information</button>
+                </div>
+                
+                <p class="modal-note">You can also contact the ministry leader directly using the information on the ministry card.</p>
+            </div>
+        </div>
+    `;
+    
+    // Add modal to body
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Get modal elements
+    const modal = document.getElementById('ministryModal');
+    const closeBtn = modal.querySelector('.modal-close');
+    const submitBtn = modal.querySelector('#modalSubmit');
+    
+    // Show modal with animation
+    setTimeout(() => {
+        modal.classList.add('active');
+    }, 10);
+    
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.remove();
+        }, 300);
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.remove();
+            }, 300);
+        }
+    });
+    
+    // Handle form submission
+    submitBtn.addEventListener('click', () => {
+        const name = document.getElementById('modalName').value;
+        const email = document.getElementById('modalEmail').value;
+        
+        if (name && email) {
+            // In a real implementation, this would send data to a server
+            alert(`Thank you ${name}! Your interest in ${ministryName} has been submitted. We'll contact you at ${email} soon.`);
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.remove();
+            }, 300);
+        } else {
+            alert('Please provide at least your name and email address.');
+        }
+    });
+    
+    // Add modal styles if not already present
+    if (!document.querySelector('#ministryModalStyles')) {
+        const modalStyles = `
+            <style id="ministryModalStyles">
+                .ministry-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.85);
+                    z-index: 3000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    padding: 20px;
+                }
+                
+                .ministry-modal.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+                .modal-content {
+                    background-color: white;
+                    border-radius: var(--border-radius);
+                    padding: 3rem;
+                    max-width: 500px;
+                    width: 100%;
+                    position: relative;
+                    transform: translateY(30px);
+                    transition: transform 0.3s;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                }
+                
+                .ministry-modal.active .modal-content {
+                    transform: translateY(0);
+                }
+                
+                .modal-close {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background: none;
+                    border: none;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: var(--gray);
+                    line-height: 1;
+                    transition: color 0.3s;
+                }
+                
+                .modal-close:hover {
+                    color: var(--accent);
+                }
+                
+                .modal-icon {
+                    width: 80px;
+                    height: 80px;
+                    background-color: var(--secondary);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 2rem;
+                    color: var(--dark);
+                    font-size: 2.5rem;
+                }
+                
+                .modal-content h3 {
+                    text-align: center;
+                    color: var(--primary);
+                    margin-bottom: 1.5rem;
+                }
+                
+                .modal-content p {
+                    text-align: center;
+                    color: var(--gray);
+                    margin-bottom: 1rem;
+                }
+                
+                .modal-form {
+                    margin: 2rem 0;
+                }
+                
+                .modal-form input,
+                .modal-form textarea {
+                    width: 100%;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid var(--light-gray);
+                    border-radius: 8px;
+                    font-family: var(--font-main);
+                    font-size: 1rem;
+                }
+                
+                .modal-form textarea {
+                    min-height: 100px;
+                    resize: vertical;
+                }
+                
+                .modal-form button {
+                    width: 100%;
+                    justify-content: center;
+                }
+                
+                .modal-note {
+                    font-size: 0.9rem;
+                    color: var(--gray);
+                    font-style: italic;
+                }
+            </style>
+        `;
+        document.head.insertAdjacentHTML('beforeend', modalStyles);
+    }
+}
+
+// Handle main ministry interest form submission
+function handleMinistryForm() {
+    const form = document.getElementById('ministryInterestForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(form);
+            const name = form.querySelector('input[type="text"]').value;
+            const email = form.querySelector('input[type="email"]').value;
+            const ministry = form.querySelector('select').value;
+            
+            // Simple validation
+            if (name && email && ministry) {
+                // In a real implementation, send to server
+                alert(`Thank you ${name}! Your interest in ${ministry} ministry has been received. We'll contact you at ${email} within 24-48 hours.`);
+                
+                // Reset form
+                form.reset();
+                
+                // Scroll to top of form
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                alert('Please fill in all required fields: Name, Email, and Ministry Interest.');
+            }
+        });
+    }
+}
+
+// Initialize scroll animations for ministries page
+function initMinistryAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                
+                // Special handling for stats if they come into view
+                if (entry.target.classList.contains('ministry-stats')) {
+                    animateMinistryStats();
+                }
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all animated elements
+    document.querySelectorAll('[class*="animate-"]').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Add smooth scrolling for anchor links on ministries page
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Filter ministries by category (for future enhancement)
+function filterMinistries(category) {
+    const ministryCards = document.querySelectorAll('.ministry-card');
+    
+    ministryCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.display = 'none';
+            }, 300);
+        }
+    });
+    }
