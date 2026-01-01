@@ -550,8 +550,9 @@
     border-radius: var(--border-radius);
     padding: 3rem;
     box-shadow: var(--shadow-lg);
-    width: 100%;
+    width: auto;
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 992px) {
