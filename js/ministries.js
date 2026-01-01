@@ -1,5 +1,8 @@
 // Ministries Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile menu
+    initMobileMenu();
+    
     // Animate ministry stats on hero section
     animateMinistryStats();
     
@@ -11,7 +14,43 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add scroll animations for ministries page
     initMinistryAnimations();
+    
+    // Set current year in footer
+    setCurrentYear();
+    
+    // Initialize smooth scrolling
+    initSmoothScrolling();
 });
+
+// Initialize mobile menu functionality
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNavList = document.getElementById('mainNavList');
+    
+    if (mobileMenuBtn && mainNavList) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNavList.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mainNavList.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mainNavList.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = mainNavList.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNavList.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+    }
+}
 
 // Animate the ministry statistics counters
 function animateMinistryStats() {
@@ -48,6 +87,7 @@ function initMinistryCards() {
         if (ministryImage) {
             card.addEventListener('mouseenter', () => {
                 ministryImage.style.transform = 'scale(1.05)';
+                ministryImage.style.transition = 'transform 0.5s ease';
             });
             
             card.addEventListener('mouseleave', () => {
@@ -72,6 +112,7 @@ function showMinistryModal(ministryName) {
     // Create modal HTML
     const modalHTML = `
         <div class="ministry-modal" id="ministryModal">
+            <div class="modal-overlay"></div>
             <div class="modal-content">
                 <button class="modal-close">&times;</button>
                 <div class="modal-icon">
@@ -116,14 +157,15 @@ function showMinistryModal(ministryName) {
     });
     
     // Close modal when clicking outside
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
+    const overlay = modal.querySelector('.modal-overlay');
+    if (overlay) {
+        overlay.addEventListener('click', () => {
             modal.classList.remove('active');
             setTimeout(() => {
                 modal.remove();
             }, 300);
-        }
-    });
+        });
+    }
     
     // Handle form submission
     submitBtn.addEventListener('click', () => {
@@ -152,7 +194,6 @@ function showMinistryModal(ministryName) {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0, 0, 0, 0.85);
                     z-index: 3000;
                     display: flex;
                     align-items: center;
@@ -168,6 +209,15 @@ function showMinistryModal(ministryName) {
                     visibility: visible;
                 }
                 
+                .modal-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.85);
+                }
+                
                 .modal-content {
                     background-color: white;
                     border-radius: var(--border-radius);
@@ -175,6 +225,7 @@ function showMinistryModal(ministryName) {
                     max-width: 500px;
                     width: 100%;
                     position: relative;
+                    z-index: 2;
                     transform: translateY(30px);
                     transition: transform 0.3s;
                     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
@@ -195,6 +246,7 @@ function showMinistryModal(ministryName) {
                     color: var(--gray);
                     line-height: 1;
                     transition: color 0.3s;
+                    z-index: 3;
                 }
                 
                 .modal-close:hover {
@@ -218,12 +270,14 @@ function showMinistryModal(ministryName) {
                     text-align: center;
                     color: var(--primary);
                     margin-bottom: 1.5rem;
+                    font-family: var(--font-heading);
                 }
                 
                 .modal-content p {
                     text-align: center;
                     color: var(--gray);
                     margin-bottom: 1rem;
+                    font-family: var(--font-main);
                 }
                 
                 .modal-form {
@@ -255,6 +309,7 @@ function showMinistryModal(ministryName) {
                     font-size: 0.9rem;
                     color: var(--gray);
                     font-style: italic;
+                    font-family: var(--font-main);
                 }
             </style>
         `;
@@ -271,7 +326,6 @@ function handleMinistryForm() {
             e.preventDefault();
             
             // Get form data
-            const formData = new FormData(form);
             const name = form.querySelector('input[type="text"]').value;
             const email = form.querySelector('input[type="email"]').value;
             const ministry = form.querySelector('select').value;
@@ -319,44 +373,35 @@ function initMinistryAnimations() {
     });
 }
 
-// Add smooth scrolling for anchor links on ministries page
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            const headerHeight = document.querySelector('.header').offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+// Initialize smooth scrolling for anchor links
+function initSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
             
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+            // Only process internal links
+            if (href === '#' || href.startsWith('#!')) return;
+            
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                e.preventDefault();
+                
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-});
+}
 
-// Filter ministries by category (for future enhancement)
-function filterMinistries(category) {
-    const ministryCards = document.querySelectorAll('.ministry-card');
-    
-    ministryCards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'block';
-            setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 100);
-        } else {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                card.style.display = 'none';
-            }, 300);
-        }
-    });
+// Set current year in footer
+function setCurrentYear() {
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
+                    }
