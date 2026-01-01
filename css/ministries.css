@@ -552,7 +552,6 @@
     box-shadow: var(--shadow-lg);
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
 }
 
 @media (max-width: 992px) {
