@@ -1,5 +1,24 @@
 /* Ministries Page Specific Styles */
 
+/* CSS Variables for consistency */
+:root {
+    --primary: #1a4d8c;
+    --primary-dark: #0d3a6e;
+    --secondary: #d4af37;
+    --accent: #c53030;
+    --light: #f8f9fa;
+    --dark: #222;
+    --gray: #5d6d7e;
+    --light-gray: #e9ecef;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    --border-radius: 12px;
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --header-height: 70px;
+}
+
 /* Ministries Hero Section */
 .ministries-hero {
     position: relative;
@@ -8,6 +27,19 @@
                 url('../images/ministries-hero.jpg') center/cover no-repeat;
     color: white;
     margin-top: var(--header-height);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.ministries-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .ministries-hero-content {
@@ -22,6 +54,8 @@
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     color: white;
+    font-family: var(--font-heading);
+    font-weight: 700;
 }
 
 .hero-subtitle {
@@ -29,6 +63,7 @@
     color: var(--secondary);
     margin-bottom: 2rem;
     font-weight: 600;
+    font-family: var(--font-main);
 }
 
 .hero-description {
@@ -36,6 +71,7 @@
     line-height: 1.8;
     margin-bottom: 3rem;
     opacity: 0.95;
+    font-family: var(--font-main);
 }
 
 .ministry-stats {
@@ -50,6 +86,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    min-width: 150px;
 }
 
 .stat-number {
@@ -57,6 +98,7 @@
     font-weight: 800;
     color: var(--secondary);
     line-height: 1;
+    font-family: var(--font-main);
 }
 
 .stat-label {
@@ -64,6 +106,7 @@
     font-weight: 600;
     margin-top: 0.5rem;
     opacity: 0.9;
+    font-family: var(--font-main);
 }
 
 /* Main Ministries Grid */
@@ -72,11 +115,37 @@
     background-color: var(--light);
 }
 
+.main-ministries .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.main-ministries h2 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: var(--gray);
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+}
+
 .ministries-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-top: 3rem;
+}
+
+@media (max-width: 992px) {
+    .ministries-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .ministry-card {
@@ -126,6 +195,7 @@
     padding: 1rem;
     font-weight: 600;
     font-size: 1.1rem;
+    font-family: var(--font-main);
 }
 
 .ministry-content {
@@ -136,6 +206,7 @@
     color: var(--primary);
     margin-bottom: 0.5rem;
     font-size: 1.6rem;
+    font-family: var(--font-heading);
 }
 
 .ministry-leader {
@@ -143,12 +214,14 @@
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 0.95rem;
+    font-family: var(--font-main);
 }
 
 .ministry-desc {
     color: var(--gray);
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    font-family: var(--font-main);
 }
 
 .ministry-details {
@@ -164,6 +237,7 @@
     align-items: center;
     gap: 0.8rem;
     font-size: 0.95rem;
+    font-family: var(--font-main);
 }
 
 .ministry-details i {
@@ -178,10 +252,20 @@
     justify-content: center;
     padding: 1rem;
     font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .ministry-btn:hover {
     background-color: var(--primary-dark);
+    transform: translateY(-3px);
 }
 
 /* Specialized Ministries */
@@ -195,6 +279,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     margin-top: 3rem;
+}
+
+@media (max-width: 1200px) {
+    .specialized-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .specialized-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .specialized-card {
@@ -229,12 +325,14 @@
     color: var(--primary);
     margin-bottom: 1rem;
     font-size: 1.4rem;
+    font-family: var(--font-heading);
 }
 
 .specialized-card p {
     color: var(--gray);
     margin-bottom: 1rem;
     line-height: 1.6;
+    font-family: var(--font-main);
 }
 
 .meeting-time {
@@ -245,6 +343,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    font-family: var(--font-main);
 }
 
 /* Ministry Spotlight */
@@ -264,9 +363,17 @@
     box-shadow: var(--shadow-lg);
 }
 
+@media (max-width: 992px) {
+    .spotlight-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
 .spotlight-text h2 {
     color: var(--primary);
     margin-bottom: 1rem;
+    font-family: var(--font-heading);
 }
 
 .spotlight-subtitle {
@@ -274,11 +381,13 @@
     color: var(--secondary);
     font-weight: 600;
     margin-bottom: 2rem;
+    font-family: var(--font-main);
 }
 
 .spotlight-list {
     list-style: none;
     margin: 2rem 0;
+    font-family: var(--font-main);
 }
 
 .spotlight-list li {
@@ -298,10 +407,13 @@
     display: flex;
     gap: 2rem;
     margin: 2.5rem 0;
+    flex-wrap: wrap;
 }
 
 .impact-stat {
     text-align: center;
+    flex: 1;
+    min-width: 120px;
 }
 
 .impact-number {
@@ -310,6 +422,7 @@
     font-weight: 800;
     color: var(--primary);
     line-height: 1;
+    font-family: var(--font-main);
 }
 
 .impact-label {
@@ -317,6 +430,7 @@
     font-weight: 600;
     color: var(--gray);
     margin-top: 0.5rem;
+    font-family: var(--font-main);
 }
 
 .spotlight-image {
@@ -351,6 +465,7 @@
     text-align: center;
     color: var(--primary);
     margin-bottom: 1rem;
+    font-family: var(--font-heading);
 }
 
 .involved-subtitle {
@@ -358,6 +473,7 @@
     font-size: 1.3rem;
     color: var(--gray);
     margin-bottom: 3rem;
+    font-family: var(--font-main);
 }
 
 .involved-steps {
@@ -365,6 +481,18 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-bottom: 4rem;
+}
+
+@media (max-width: 1200px) {
+    .involved-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .involved-steps {
+        grid-template-columns: 1fr;
+    }
 }
 
 .step {
@@ -391,18 +519,21 @@
     justify-content: center;
     font-weight: 800;
     font-size: 1.2rem;
+    font-family: var(--font-main);
 }
 
 .step h4 {
     color: var(--primary);
     margin: 1.5rem 0 1rem;
     font-size: 1.2rem;
+    font-family: var(--font-heading);
 }
 
 .step p {
     color: var(--gray);
     font-size: 0.95rem;
     line-height: 1.5;
+    font-family: var(--font-main);
 }
 
 .contact-box {
@@ -415,11 +546,18 @@
     box-shadow: var(--shadow-lg);
 }
 
+@media (max-width: 992px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-info h4,
 .contact-form h4 {
     color: var(--primary);
     margin-bottom: 1.5rem;
     font-size: 1.4rem;
+    font-family: var(--font-heading);
 }
 
 .contact-details {
@@ -432,6 +570,7 @@
     gap: 1rem;
     margin-bottom: 1rem;
     color: var(--gray);
+    font-family: var(--font-main);
 }
 
 .contact-details i {
@@ -467,4 +606,78 @@
 .contact-form button {
     margin-top: 1rem;
     justify-content: center;
-  }
+}
+
+/* Animation Classes for ministries page */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeLeft 0.8s forwards;
+}
+
+.animate-fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeRight 0.8s forwards;
+}
+
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s forwards;
+}
+
+.animate-scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 0.8s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+        }
