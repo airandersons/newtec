@@ -1,5 +1,11 @@
 /* Ministries Page Specific Styles */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* CSS Variables for consistency */
 :root {
     --primary: #1a4d8c;
