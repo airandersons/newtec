@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Fellowships Around Kampala | New Testament Evangelical Church</title>
+    <meta name="description" content="Find your spiritual family in Kampala. Join one of our 25+ cell fellowships for Bible study, prayer, and community across Kitintale, Luzira, and surrounding areas.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="New Testament Evangelical Church Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>New Testament Evangelical Church</h1>
+                    <p class="tagline">Preaching Christ, Transforming Lives</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cell-fellowships.html" class="active">Cell Fellowships</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#sermons">Sermons</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section for Cell Fellowships -->
+    <section class="cells-hero">
+        <div class="cells-hero-bg"></div>
+        <div class="cells-hero-overlay"></div>
+        <div class="container">
+            <div class="cells-hero-content animate-fade-up">
+                <h1 class="cells-hero-title">Find Your Spiritual Family in Kampala</h1>
+                <p class="cells-hero-subtitle">Connect, grow, and belong in one of our 25+ cell fellowships across the city</p>
+                <div class="cells-stats animate-scale-in delay-1">
+                    <div class="cells-stat">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label">Active Fellowships</span>
+                    </div>
+                    <div class="cells-stat">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">City Locations</span>
+                    </div>
+                    <div class="cells-stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Members Connected</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-join-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Why Join a Cell Fellowship?</h2>
+                <p class="section-subtitle">Life transformation happens best in community</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card animate-slide-up">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Deepen Relationships</h3>
+                    <p>Move beyond Sunday greetings to genuine friendship, support, and accountability in a small group setting.</p>
+                </div>
+
+                <div class="benefit-card animate-slide-up delay-1">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <h3>Grow in Faith</h3>
+                    <p>Discuss the Bible, ask questions, and pray together in a comfortable environment that encourages spiritual growth.</p>
+                </div>
+
+                <div class="benefit-card animate-slide-up delay-2">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Serve Your Community</h3>
+                    <p>Be part of local outreach and support initiatives that make a tangible difference in your neighborhood.</p>
+                </div>
+
+                <div class="benefit-card animate-slide-up">
+                    <div class="benefit-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Find Belonging</h3>
+                    <p>Whether you're in Kitintale, Luzira, or elsewhere in Kampala, find a group close to home where you truly belong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Fellowships Grid -->
+    <section class="all-fellowships-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Find a Fellowship Near You</h2>
+                <p class="section-subtitle">Browse our cell groups by location and focus</p>
+            </div>
+
+            <!-- Location Filter -->
+            <div class="location-filter animate-fade-up">
+                <h3>Filter by Location</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-location="all">All Locations</button>
+                    <button class="filter-btn" data-location="kitintale">Kitintale</button>
+                    <button class="filter-btn" data-location="luzira">Luzira</button>
+                    <button class="filter-btn" data-location="nakawa">Nakawa</button>
+                    <button class="filter-btn" data-location="bunga">Bunga</button>
+                    <button class="filter-btn" data-location="kireka">Kireka</button>
+                </div>
+            </div>
+
+            <!-- Fellowships Grid -->
+            <div class="fellowships-grid">
+                <!-- Kitintale Groups -->
+                <div class="fellowship-card animate-slide-up" data-location="kitintale">
+                    <div class="fellowship-image" style="background-image: url('images/kitintale-men.jpg');">
+                        <span class="location-badge">Kitintale</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Kitintale Men's Fellowship</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Tuesdays, 6:30 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Men • 15-20 members</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Near Kitintale Market</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">A strong brotherhood for men seeking spiritual growth, accountability, and practical faith application.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by Deacon John</span>
+                        </div>
+                        <a href="#join-kitintale-men" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fellowship-card animate-slide-up delay-1" data-location="kitintale">
+                    <div class="fellowship-image" style="background-image: url('images/kitintale-youth.jpg');">
+                        <span class="location-badge">Kitintale</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Youth Alive Fellowship</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Fridays, 7:00 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Youth (18-30) • 25-30 members</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Portbell Road Area</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">Dynamic gatherings for young adults featuring Bible study, worship, and relevant life discussions.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by Sarah K.</span>
+                        </div>
+                        <a href="#join-youth-alive" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Luzira Groups -->
+                <div class="fellowship-card animate-slide-up" data-location="luzira">
+                    <div class="fellowship-image" style="background-image: url('images/luzira-family.jpg');">
+                        <span class="location-badge">Luzira</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Luzira Family Fellowship</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Wednesdays, 5:00 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Families • 8-12 families</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Luzira Housing Estates</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">Families with children welcome for prayer, Bible study, and building community together.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by Pastor James</span>
+                        </div>
+                        <a href="#join-luzira-family" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fellowship-card animate-slide-up delay-1" data-location="luzira">
+                    <div class="fellowship-image" style="background-image: url('images/luzira-professionals.jpg');">
+                        <span class="location-badge">Luzira</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Luzira Professionals Cell</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Tuesdays, 6:30 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Young Professionals • 12-15 members</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Luzira Center</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">Young professionals gathering for Bible study, career discussions, and mutual encouragement.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by John & Mary</span>
+                        </div>
+                        <a href="#join-luzira-pro" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nakawa Groups -->
+                <div class="fellowship-card animate-slide-up" data-location="nakawa">
+                    <div class="fellowship-image" style="background-image: url('images/nakawa-women.jpg');">
+                        <span class="location-badge">Nakawa</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Nakawa Women's Prayer</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Thursdays, 4:00 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Women • 10-15 members</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nakawa Division</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">A powerful prayer and support group for women facing life's challenges and celebrating victories.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by Mama Grace</span>
+                        </div>
+                        <a href="#join-nakawa-women" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bunga Groups -->
+                <div class="fellowship-card animate-slide-up delay-1" data-location="bunga">
+                    <div class="fellowship-image" style="background-image: url('images/bunga-couples.jpg');">
+                        <span class="location-badge">Bunga</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Bunga Couples Fellowship</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Saturdays, 5:30 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Married Couples • 6-8 couples</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bunga Lakeside</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">Building strong marriages through biblical principles, fellowship, and couple mentoring.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by Dr. & Mrs. Kato</span>
+                        </div>
+                        <a href="#join-bunga-couples" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kireka Groups -->
+                <div class="fellowship-card animate-slide-up" data-location="kireka">
+                    <div class="fellowship-image" style="background-image: url('images/kireka-students.jpg');">
+                        <span class="location-badge">Kireka</span>
+                    </div>
+                    <div class="fellowship-content">
+                        <h3>Kireka Students Cell</h3>
+                        <div class="fellowship-details">
+                            <div class="detail-item">
+                                <i class="far fa-clock"></i>
+                                <span>Sundays, 3:00 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Students • 20-25 members</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kireka Town Center</span>
+                            </div>
+                        </div>
+                        <p class="fellowship-description">University and college students exploring faith, academics, and future calling together.</p>
+                        <div class="fellowship-host">
+                            <i class="fas fa-user"></i>
+                            <span>Hosted by Brother Michael</span>
+                        </div>
+                        <a href="#join-kireka-students" class="btn btn-primary btn-small">
+                            <i class="fas fa-user-plus"></i> Join This Group
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results-message" id="noResults" style="display: none;">
+                <p>No cell groups found in this location. Check back soon or <a href="#start-group">consider starting one</a>!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Join Section -->
+    <section class="how-to-join-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Ready to Join a Fellowship?</h2>
+                <p class="section-subtitle">Three simple steps to get connected</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card animate-slide-left">
+                    <div class="step-number">1</div>
+                    <h3>Browse Groups</h3>
+                    <p>Look through our cell fellowships above and find one that matches your location, schedule, and life stage.</p>
+                </div>
+
+                <div class="step-card animate-slide-up">
+                    <div class="step-number">2</div>
+                    <h3>Contact the Host</h3>
+                    <p>Click "Join This Group" or contact the fellowship host directly to confirm meeting details and get directions.</p>
+                </div>
+
+                <div class="step-card animate-slide-right">
+                    <div class="step-number">3</div>
+                    <h3>Visit & Connect</h3>
+                    <p>Attend your first meeting, meet your new spiritual family, and begin your journey of growth in community.</p>
+                </div>
+            </div>
+
+            <div class="join-cta animate-fade-up">
+                <h3>Need Help Choosing?</h3>
+                <p>Contact our Cell Ministry Coordinator who will help you find the perfect fellowship match.</p>
+                <div class="contact-info-box">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call/WhatsApp</h4>
+                            <p>+256 706 254106</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook-messenger"></i>
+                        <div>
+                            <h4>Message on Facebook</h4>
+                            <p><a href="https://www.facebook.com/EvangelicalKitintale" target="_blank">New Testament Evangelical Church</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>cells@newtestamentevangelical.com</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact-form" class="btn btn-secondary">
+                    <i class="fas fa-comment-dots"></i> Send a Message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start a Fellowship Section -->
+    <section class="start-fellowship-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Feel Called to Host?</h2>
+                <p class="section-subtitle">Start a new cell fellowship in your area</p>
+            </div>
+
+            <div class="start-fellowship-content">
+                <div class="start-info animate-slide-left">
+                    <h3>We'll Equip & Support You</h3>
+                    <p>If you feel called to start a cell fellowship in your neighborhood, we provide:</p>
+                    <ul class="support-list">
+                        <li><i class="fas fa-check-circle"></i> Leadership training and materials</li>
+                        <li><i class="fas fa-check-circle"></i> Ongoing pastoral support and guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Connection to church resources</li>
+                        <li><i class="fas fa-check-circle"></i> Promotion in our church community</li>
+                    </ul>
+                    <p>Whether you're in an area we already serve or somewhere new, we'd love to partner with you.</p>
+                </div>
+
+                <div class="start-form animate-slide-right">
+                    <h3>Express Your Interest</h3>
+                    <form id="hostInterestForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Location/Neighborhood" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your calling and vision for this fellowship..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit Interest
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about cell fellowships</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item animate-slide-up">
+                    <div class="faq-question">
+                        <h3>What happens at a typical cell meeting?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Meetings typically include fellowship time, worship, Bible study/discussion, prayer for one another, and planning for outreach or service projects. Each group has its own rhythm but follows this general pattern.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-slide-up delay-1">
+                    <div class="faq-question">
+                        <h3>Do I need to be a member of NTEC to join?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not at all! Our cell fellowships are open to everyone - regular attenders, new visitors, and even those just exploring faith. It's a great way to get to know our church community in a smaller setting.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-slide-up delay-2">
+                    <div class="faq-question">
+                        <h3>How often do cell groups meet?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most groups meet weekly, though some may meet bi-weekly. The specific schedule is listed with each fellowship. Consistency helps build strong relationships.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-slide-up">
+                    <div class="faq-question">
+                        <h3>Can I visit a group before committing?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage visitors to attend 2-3 meetings to get a feel for the group dynamics and see if it's a good fit before making any commitment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.jpeg" alt="NTEC Logo" class="footer-logo">
+                    <div class="footer-text">
+                        <h3>New Testament Evangelical Church</h3>
+                        <p class="identity-line">Preaching Christ, Transforming Lives</p>
+                        <p class="footer-tagline">Building community through cell fellowships across Kampala since 1996.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Cell Fellowships</h4>
+                        <ul>
+                            <li><a href="#kitintale">Kitintale Groups</a></li>
+                            <li><a href="#luzira">Luzira Groups</a></li>
+                            <li><a href="#nakawa">Nakawa Groups</a></li>
+                            <li><a href="#bunga">Bunga Groups</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#materials">Study Materials</a></li>
+                            <li><a href="#leaders">Leaders Portal</a></li>
+                            <li><a href="#calendar">Events Calendar</a></li>
+                            <li><a href="#prayer">Prayer Requests</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/EvangelicalKitintale" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://youtube.com/@newtestamentevangelicalchu8693?si=mDZGXb1qoIEl_plF" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fas fa-phone"></i></a>
+                        </div>
+                        <div class="newsletter">
+                            <p>Get fellowship updates</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> New Testament Evangelical Church Kitintale, Kampala (U). All rights reserved.</p>
+                <p class="seo-note">Cell fellowships in Kampala | Small groups in Kitintale | Bible study groups Luzira | Christian community Uganda</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="" alt="" class="modal-image">
+        </div>
+    </div>
+
+    <script src="js/cell-fellowships.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+  </html>
