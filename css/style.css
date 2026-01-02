@@ -1714,7 +1714,7 @@ a {
     overflow: hidden;
     margin-top: var(--header-height);
     padding: 2.5rem;
-    background: linear-gradient(135deg, rgba(26, 77, 140, 0.9), rgba(13, 58, 110, 0.9));
+    background: linear-gradient(135deg, rgba(26, 77, 140, 0), rgba(13, 58, 110, 0));
 }
 
 .cells-hero-bg {
@@ -1729,7 +1729,7 @@ a {
 .cells-hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(45deg, rgba(26, 77, 140, 0.8), rgba(13, 58, 110, 0.9));
+    background: linear-gradient(45deg, rgba(26, 77, 140, 0.4), rgba(13, 58, 110, 0.5));
 }
 
 .cells-hero-content {
