@@ -506,8 +506,8 @@
 
 @media (max-width: 768px) {
     .cells-hero {
-        height: 50vh;
-        min-height: 350px;
+        min-height: 50vh;
+        height: auto;
     }
     
     .cells-hero-title {
