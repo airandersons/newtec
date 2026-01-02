@@ -454,3 +454,168 @@
         font-size: 2rem;
     }
         }
+
+
+/* Cell Fellowships Page Responsive Styles */
+
+@media (max-width: 1200px) {
+    .cells-hero-title {
+        font-size: 3rem;
+    }
+    
+    .cells-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .fellowships-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .cells-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .cells-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .cells-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .cells-stats {
+        gap: 3rem;
+    }
+    
+    .cells-stat .stat-number {
+        font-size: 3rem;
+    }
+    
+    .start-fellowship-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .start-info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .cells-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .cells-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .cells-hero-content {
+        padding: 1rem;
+    }
+    
+    .cells-stats {
+        gap: 2rem;
+        flex-direction: column;
+    }
+    
+    .filter-buttons {
+        gap: 0.8rem;
+    }
+    
+    .filter-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .fellowships-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .step-card {
+        padding: 2rem;
+    }
+    
+    .contact-info-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .join-cta {
+        padding: 2rem;
+    }
+    
+    .faq-question {
+        padding: 1.5rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cells-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .cells-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cells-stat .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .cells-stat .stat-label {
+        font-size: 1rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .location-filter {
+        padding: 1.5rem;
+    }
+    
+    .filter-buttons {
+        justify-content: flex-start;
+    }
+    
+    .fellowship-content {
+        padding: 1.5rem;
+    }
+    
+    .start-form {
+        padding: 1.5rem;
+    }
+    
+    .faq-question {
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1.5rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+    }
+    }
