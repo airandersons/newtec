@@ -1701,3 +1701,549 @@ a {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(26, 77, 140, 0.1);
         }
+
+/* Cell Fellowships Page Specific Styles */
+
+/* Cells Hero Section */
+.cells-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: var(--header-height);
+    background: linear-gradient(135deg, rgba(26, 77, 140, 0.9), rgba(13, 58, 110, 0.9));
+}
+
+.cells-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/cells-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+}
+
+.cells-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(26, 77, 140, 0.8), rgba(13, 58, 110, 0.9));
+}
+
+.cells-hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cells-hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cells-hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.cells-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.cells-stat {
+    text-align: center;
+}
+
+.cells-stat .stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.cells-stat .stat-label {
+    font-weight: 600;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Why Join Section */
+.why-join-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.benefit-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* All Fellowships Section */
+.all-fellowships-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.location-filter {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.location-filter h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    border: 2px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.fellowships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.fellowship-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fellowship-card.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    position: absolute;
+}
+
+.fellowship-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.fellowship-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.location-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--secondary);
+    color: var(--dark);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.fellowship-content {
+    padding: 2rem;
+}
+
+.fellowship-content h3 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.fellowship-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.detail-item i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.fellowship-description {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.fellowship-host {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.fellowship-host i {
+    color: var(--secondary);
+}
+
+.btn-small {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+}
+
+.no-results-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.no-results-message p {
+    font-size: 1.2rem;
+    color: var(--gray);
+}
+
+.no-results-message a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* How to Join Section */
+.how-to-join-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.step-card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.step-card h3 {
+    color: var(--primary);
+    margin: 1rem 0 1.5rem;
+    font-size: 1.4rem;
+}
+
+.step-card p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.join-cta {
+    background-color: white;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.join-cta h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.join-cta > p {
+    color: var(--gray);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.contact-item i {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.contact-item h4 {
+    color: var(--dark);
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.contact-item p {
+    color: var(--gray);
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.contact-item a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Start a Fellowship Section */
+.start-fellowship-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.start-fellowship-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.start-info {
+    padding-right: 2rem;
+}
+
+.start-info h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.start-info p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.support-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.support-list li {
+    margin-bottom: 1rem;
+    color: var(--gray);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.support-list i {
+    color: var(--secondary);
+    margin-top: 0.2rem;
+}
+
+.start-form {
+    background-color: var(--light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+}
+
+.start-form h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.start-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.start-form input,
+.start-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.start-form input:focus,
+.start-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 77, 140, 0.1);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.faq-question {
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background-color: rgba(26, 77, 140, 0.05);
+}
+
+.faq-question h3 {
+    color: var(--primary);
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+.faq-question i {
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 2rem 2rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: var(--gray);
+    line-height: 1.7;
+    }
