@@ -549,7 +549,8 @@
     gap: 3rem;
     background-color: white;
     border-radius: var(--border-radius);
-    padding: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     box-shadow: var(--shadow-lg);
     width: 100%;
     max-width: 100%;
@@ -583,6 +584,7 @@
     margin-bottom: 1rem;
     color: var(--gray);
     font-family: var(--font-main);
+    max-width: 70%;
 }
 
 .contact-details i {
