@@ -581,6 +581,9 @@
     margin-bottom: 1rem;
     color: var(--gray);
     font-family: var(--font-main);
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .contact-details i {
