@@ -550,7 +550,7 @@
     background-color: white;
     border-radius: var(--border-radius);
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 1rem;
     box-shadow: var(--shadow-lg);
     max-width: 1200px;
     box-sizing: border-box;
@@ -572,6 +572,7 @@
 
 .contact-details {
     margin-top: 2rem;
+    font-size: 19px;
 }
 
 .contact-details p {
@@ -581,6 +582,7 @@
     margin-bottom: 1rem;
     color: var(--gray);
     font-family: var(--font-main);
+    font-size: 19px;
     max-width: 100%;
     word-break: break-word;
     overflow-wrap: anywhere;
