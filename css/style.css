@@ -1708,7 +1708,7 @@ a {
 .cells-hero {
     position: relative;
     height: 80vh;
-    min-height: 500px;
+    min-height: 800px;
     display: flex;
     align-items: center;
     overflow: hidden;
