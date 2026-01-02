@@ -22,35 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
 });
 
-// Initialize mobile menu functionality
-function initMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mainNavList = document.getElementById('mainNavList');
-    
-    if (mobileMenuBtn && mainNavList) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mainNavList.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!mainNavList.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                mainNavList.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            }
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = mainNavList.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mainNavList.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            });
-        });
-    }
-}
 
 // Animate the ministry statistics counters
 function animateMinistryStats() {
