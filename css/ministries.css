@@ -551,7 +551,7 @@
     border-radius: var(--border-radius);
     padding: 2.5rem;
     box-shadow: var(--shadow-lg);
-    width: auto;
+    width: 100%;
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -572,6 +572,8 @@
 
 .contact-details {
     margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .contact-details p {
@@ -592,6 +594,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .contact-form input,
