@@ -1707,11 +1707,10 @@ a {
 /* Cells Hero Section */
 .cells-hero {
     position: relative;
-    height: 80vh;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
     margin-top: var(--header-height);
     background: linear-gradient(135deg, rgba(26, 77, 140, 0), rgba(13, 58, 110, 0));
 }
