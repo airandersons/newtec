@@ -1708,7 +1708,7 @@ a {
 .cells-hero {
     position: relative;
     height: 80vh;
-    min-height: 800px;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -1738,6 +1738,7 @@ a {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
+    height: 75vh;
 }
 
 .cells-hero-title {
