@@ -2247,3 +2247,916 @@ a {
     color: var(--gray);
     line-height: 1.7;
     }
+
+/* VBI Bible School Page Specific Styles */
+
+/* VBI Hero Section */
+.vbi-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: var(--header-height);
+    background: linear-gradient(135deg, rgba(26, 77, 140, 0.9), rgba(13, 58, 110, 0.9));
+}
+
+.vbi-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/vbi-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+}
+
+.vbi-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(26, 77, 140, 0.8), rgba(13, 58, 110, 0.9));
+}
+
+.vbi-hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.vbi-logo-container {
+    margin-bottom: 2rem;
+}
+
+.vbi-logo {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.vbi-full-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.vbi-full-name span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.vbi-hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.vbi-hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.vbi-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.vbi-stat {
+    text-align: center;
+}
+
+.vbi-stat .stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.vbi-stat .stat-label {
+    font-weight: 600;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.vbi-hero .hero-actions {
+    justify-content: center;
+}
+
+/* Why VBI Section */
+.why-vbi-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.why-vbi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-vbi-card {
+    background-color: var(--light);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.why-vbi-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.why-vbi-icon {
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.why-vbi-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.why-vbi-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Programs Section */
+.programs-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.programs-tabs {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.tab-buttons {
+    display: flex;
+    background-color: var(--primary-dark);
+    overflow-x: auto;
+}
+
+.tab-btn {
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: var(--secondary);
+}
+
+.tab-content {
+    padding: 3rem;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.program-details h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.program-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.meta-item i {
+    color: var(--secondary);
+}
+
+.program-description {
+    color: var(--gray);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.courses-list {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2.5rem;
+}
+
+.courses-list h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.courses-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.8rem;
+    list-style: none;
+}
+
+.courses-list li {
+    color: var(--gray);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.courses-list li::before {
+    content: '•';
+    color: var(--secondary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.program-cta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Faculty Section */
+.faculty-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faculty-card {
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.faculty-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.faculty-info {
+    padding: 2rem;
+}
+
+.faculty-info h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.faculty-role {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.faculty-bio {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.faculty-expertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.expertise-tag {
+    background-color: rgba(26, 77, 140, 0.1);
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Admission Process */
+.admission-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.admission-steps {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.step-circle {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.step-circle h3 {
+    color: var(--primary);
+    margin: 1rem 0 1.5rem;
+    font-size: 1.4rem;
+}
+
+.step-circle p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.admission-requirements {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.admission-requirements h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.requirements-list {
+    list-style: none;
+}
+
+.requirements-list li {
+    margin-bottom: 1rem;
+    color: var(--gray);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.requirements-list i {
+    color: var(--secondary);
+    margin-top: 0.2rem;
+}
+
+/* Tuition Section */
+.tuition-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.tuition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+}
+
+.tuition-card {
+    background-color: var(--light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
+}
+
+.tuition-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tuition-card.featured {
+    background-color: var(--primary);
+    color: white;
+}
+
+.tuition-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary);
+    color: var(--dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.tuition-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tuition-card.featured .tuition-header {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.tuition-header h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tuition-card.featured .tuition-header h3 {
+    color: white;
+}
+
+.tuition-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.tuition-card.featured .tuition-price {
+    color: var(--secondary);
+}
+
+.tuition-price span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.tuition-card.featured .tuition-price span {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tuition-features {
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.tuition-features li {
+    margin-bottom: 1rem;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.tuition-card.featured .tuition-features li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tuition-features i {
+    color: var(--secondary);
+}
+
+.tuition-features .fa-check {
+    color: #4CAF50;
+}
+
+.tuition-features .fa-times {
+    color: #f44336;
+    opacity: 0.6;
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+.financial-aid {
+    background-color: var(--light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.financial-aid h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.financial-aid p {
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aid-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.aid-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.aid-option i {
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+/* Apply Section */
+.apply-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.apply-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.apply-info h3,
+.apply-form h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.intake-dates {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2.5rem;
+    box-shadow: var(--shadow);
+}
+
+.intake-date {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.intake-date:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.intake-month {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    min-width: 80px;
+    text-align: center;
+}
+
+.intake-details h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.intake-details p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-box h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+.contact-info .contact-item i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.apply-form {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.apply-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 77, 140, 0.1);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    margin-top: 0.2rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: var(--light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.testimonial-content {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.testimonial-content i {
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-content p {
+    color: var(--gray);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--secondary);
+}
+
+.author-info h4 {
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.author-role {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* VBI FAQ Section */
+.vbi-faq-section {
+    padding: 6rem 0;
+    background-color: var(--light);
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.faq-question {
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background-color: rgba(26, 77, 140, 0.05);
+}
+
+.faq-question h3 {
+    color: var(--primary);
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+.faq-question i {
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 2rem 2rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* VBI Footer */
+.vbi-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.vbi-logo-small {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+}
+
+.vbi-footer-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.vbi-footer-name span {
+    font-weight: 700;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.affiliation {
+    font-size: 0.9rem;
+    color: #b0c4de;
+    font-weight: 400;
+}
+
+.contact-mini {
+    margin-bottom: 1.5rem;
+}
+
+.contact-mini p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: #b0c4de;
+    font-size: 0.95rem;
+}
+
+.contact-mini i {
+    color: var(--secondary);
+    width: 20px;
+    }
