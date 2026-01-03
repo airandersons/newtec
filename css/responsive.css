@@ -638,8 +638,8 @@
 
 @media (max-width: 992px) {
     .vbi-hero {
-        height: 70vh;
-        min-height: 500px;
+        min-height: 70vh;
+        height: auto;
     }
     
     .vbi-logo {
