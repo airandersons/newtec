@@ -619,3 +619,207 @@
         padding: 0 1.5rem 1.5rem;
     }
     }
+
+/* VBI Bible School Page Responsive Styles */
+
+@media (max-width: 1200px) {
+    .vbi-hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .vbi-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .tuition-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .vbi-hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .vbi-logo {
+        font-size: 4rem;
+    }
+    
+    .vbi-full-name span {
+        font-size: 1.5rem;
+    }
+    
+    .vbi-hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .vbi-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .vbi-stats {
+        gap: 3rem;
+    }
+    
+    .vbi-stat .stat-number {
+        font-size: 3rem;
+    }
+    
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        min-width: 150px;
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .step-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .apply-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .vbi-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .vbi-logo {
+        font-size: 3.5rem;
+    }
+    
+    .vbi-full-name {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .vbi-full-name span {
+        font-size: 1.2rem;
+    }
+    
+    .vbi-hero-title {
+        font-size: 2rem;
+    }
+    
+    .vbi-hero-content {
+        padding: 1rem;
+    }
+    
+    .vbi-stats {
+        gap: 2rem;
+        flex-direction: column;
+    }
+    
+    .why-vbi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-content {
+        padding: 2rem;
+    }
+    
+    .courses-list ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-cta {
+        flex-direction: column;
+    }
+    
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tuition-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .vbi-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .vbi-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .vbi-stat .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .vbi-stat .stat-label {
+        font-size: 1rem;
+    }
+    
+    .tab-btn {
+        min-width: 120px;
+        padding: 1rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .program-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tuition-card {
+        padding: 1.5rem;
+    }
+    
+    .tuition-price {
+        font-size: 2rem;
+    }
+    
+    .aid-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .apply-form {
+        padding: 1.5rem;
+    }
+    
+    .faq-question {
+        padding: 1.2rem 1.5rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1.5rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+    }
+        }
