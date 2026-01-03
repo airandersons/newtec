@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible School in Kampala | New Testament Evangelical Church Training Program</title>
+    <meta name="description" content="Victory Bible Institute (VBI) offers accredited Bible school training in Kampala. Prepare for ministry with our comprehensive theological education program.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="New Testament Evangelical Church Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>New Testament Evangelical Church</h1>
+                    <p class="tagline">Preaching Christ, Transforming Lives</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="cell-fellowships.html">Cell Fellowships</a></li>
+                    <li><a href="bible-school.html" class="active">Bible School</a></li>
+                    <li><a href="#sermons">Sermons</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- VBI Hero Section -->
+    <section class="vbi-hero">
+        <div class="vbi-hero-bg"></div>
+        <div class="vbi-hero-overlay"></div>
+        <div class="container">
+            <div class="vbi-hero-content animate-fade-up">
+                <div class="vbi-logo-container">
+                    <h1 class="vbi-logo">VBI</h1>
+                    <div class="vbi-full-name">
+                        <span>Victory</span>
+                        <span>Bible</span>
+                        <span>Institute</span>
+                    </div>
+                </div>
+                <h2 class="vbi-hero-title">Biblical Training for Ministry & Life</h2>
+                <p class="vbi-hero-subtitle">Accredited Bible school education in the heart of Kampala</p>
+                <div class="vbi-stats animate-scale-in delay-1">
+                    <div class="vbi-stat">
+                        <span class="stat-number" data-count="20">0</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="vbi-stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Graduates Trained</span>
+                    </div>
+                    <div class="vbi-stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Expert Instructors</span>
+                    </div>
+                </div>
+                <div class="hero-actions animate-fade-up delay-2">
+                    <a href="#apply" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> Apply Now
+                    </a>
+                    <a href="#programs" class="btn btn-outline">
+                        <i class="fas fa-book-open"></i> View Programs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why VBI Section -->
+    <section class="why-vbi-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Why Choose Victory Bible Institute?</h2>
+                <p class="section-subtitle">A transformative learning experience rooted in biblical truth</p>
+            </div>
+
+            <div class="why-vbi-grid">
+                <div class="why-vbi-card animate-slide-up">
+                    <div class="why-vbi-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Accredited Education</h3>
+                    <p>VBI offers recognized certification that prepares you for effective ministry and leadership roles.</p>
+                </div>
+
+                <div class="why-vbi-card animate-slide-up delay-1">
+                    <div class="why-vbi-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Experienced Faculty</h3>
+                    <p>Learn from seasoned pastors, theologians, and ministry practitioners with real-world experience.</p>
+                </div>
+
+                <div class="why-vbi-card animate-slide-up delay-2">
+                    <div class="why-vbi-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Practical Ministry Focus</h3>
+                    <p>Combine theoretical knowledge with hands-on ministry practice in local church settings.</p>
+                </div>
+
+                <div class="why-vbi-card animate-slide-up">
+                    <div class="why-vbi-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Schedules</h3>
+                    <p>Evening and weekend classes designed for working professionals and active church members.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section" id="programs">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Our Programs & Courses</h2>
+                <p class="section-subtitle">Comprehensive theological education for every calling</p>
+            </div>
+
+            <div class="programs-tabs animate-fade-up">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="certificate">Certificate Program</button>
+                    <button class="tab-btn" data-tab="diploma">Diploma Program</button>
+                    <button class="tab-btn" data-tab="degree">Degree Program</button>
+                    <button class="tab-btn" data-tab="short-courses">Short Courses</button>
+                </div>
+
+                <div class="tab-content active" id="certificate">
+                    <div class="program-details">
+                        <h3>Certificate in Biblical Studies</h3>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>1 Year Program</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>12 Core Courses</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Entry Level</span>
+                            </div>
+                        </div>
+                        <p class="program-description">This foundational program provides essential biblical knowledge for personal growth, church ministry, and leadership development. Perfect for new believers, Sunday school teachers, and emerging leaders.</p>
+                        
+                        <div class="courses-list">
+                            <h4>Core Courses Include:</h4>
+                            <ul>
+                                <li>Old Testament Survey</li>
+                                <li>New Testament Survey</li>
+                                <li>Biblical Hermeneutics</li>
+                                <li>Christian Doctrine</li>
+                                <li>Introduction to Evangelism</li>
+                                <li>Church History Survey</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="program-cta">
+                            <a href="#apply-certificate" class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download Brochure
+                            </a>
+                            <a href="#enroll-certificate" class="btn btn-secondary">
+                                <i class="fas fa-user-plus"></i> Enroll Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="diploma">
+                    <div class="program-details">
+                        <h3>Diploma in Theology & Ministry</h3>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>2 Year Program</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>24 Courses</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Intermediate Level</span>
+                            </div>
+                        </div>
+                        <p class="program-description">An intensive program for those called to pastoral ministry, missions, or advanced church leadership. Combines deep theological study with practical ministry skills development.</p>
+                        
+                        <div class="courses-list">
+                            <h4>Key Course Areas:</h4>
+                            <ul>
+                                <li>Systematic Theology</li>
+                                <li>Pastoral Counseling</li>
+                                <li>Homiletics & Preaching</li>
+                                <li>Church Administration</li>
+                                <li>Biblical Languages (Greek/Hebrew)</li>
+                                <li>Missions & Evangelism</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="degree">
+                    <div class="program-details">
+                        <h3>Bachelor of Theology (B.Th)</h3>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>3-4 Year Program</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>36+ Courses</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Advanced Level</span>
+                            </div>
+                        </div>
+                        <p class="program-description">Our flagship degree program offering comprehensive theological education for those pursuing professional ministry, teaching, or advanced academic studies.</p>
+                        
+                        <div class="courses-list">
+                            <h4>Program Highlights:</h4>
+                            <ul>
+                                <li>Advanced Biblical Exegesis</li>
+                                <li>Theological Research Methods</li>
+                                <li>Church Leadership Development</li>
+                                <li>Ministry Practicum & Internship</li>
+                                <li>Thesis Project</li>
+                                <li>Elective Specializations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="short-courses">
+                    <div class="program-details">
+                        <h3>Short Courses & Workshops</h3>
+                        <div class="program-meta">
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span>3-12 Weeks</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-book"></i>
+                                <span>Specialized Topics</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+                        <p class="program-description">Focused training for specific ministry areas. Perfect for continuous professional development or exploring specific topics without long-term commitment.</p>
+                        
+                        <div class="courses-list">
+                            <h4>Popular Short Courses:</h4>
+                            <ul>
+                                <li>Biblical Counseling Skills</li>
+                                <li>Worship Leadership</li>
+                                <li>Children & Youth Ministry</li>
+                                <li>Marriage & Family Ministry</li>
+                                <li>Church Planting Basics</li>
+                                <li>Financial Stewardship</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Meet Our Faculty</h2>
+                <p class="section-subtitle">Learn from experienced pastors, theologians, and ministry practitioners</p>
+            </div>
+
+            <div class="faculty-grid">
+                <div class="faculty-card animate-scale-in">
+                    <div class="faculty-image" style="background-image: url('images/faculty-bishop.jpg');"></div>
+                    <div class="faculty-info">
+                        <h3>Bishop Peter Mutebi</h3>
+                        <p class="faculty-role">Founder & Senior Lecturer</p>
+                        <p class="faculty-bio">Founder of NTEC with 40+ years of pastoral experience. Specializes in Church History and Pastoral Theology.</p>
+                        <div class="faculty-expertise">
+                            <span class="expertise-tag">Church Leadership</span>
+                            <span class="expertise-tag">Biblical Preaching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card animate-scale-in delay-1">
+                    <div class="faculty-image" style="background-image: url('images/faculty-dr-kato.jpg');"></div>
+                    <div class="faculty-info">
+                        <h3>Dr. James Kato</h3>
+                        <p class="faculty-role">Academic Dean</p>
+                        <p class="faculty-bio">PhD in Systematic Theology. 20+ years teaching experience in theological institutions across East Africa.</p>
+                        <div class="faculty-expertise">
+                            <span class="expertise-tag">Systematic Theology</span>
+                            <span class="expertise-tag">Biblical Hermeneutics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculty-card animate-scale-in delay-2">
+                    <div class="faculty-image" style="background-image: url('images/faculty-pastor-sarah.jpg');"></div>
+                    <div class="faculty-info">
+                        <h3>Pastor Sarah Nakato</h3>
+                        <p class="faculty-role">Director of Practical Ministry</p>
+                        <p class="faculty-bio">Specializes in counseling, women's ministry, and family discipleship. MA in Christian Counseling.</p>
+                        <div class="faculty-expertise">
+                            <span class="expertise-tag">Pastoral Counseling</span>
+                            <span class="expertise-tag">Family Ministry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section class="admission-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Admission Process</h2>
+                <p class="section-subtitle">How to join Victory Bible Institute</p>
+            </div>
+
+            <div class="admission-steps">
+                <div class="step-container">
+                    <div class="step-circle animate-slide-left">
+                        <div class="step-number">1</div>
+                        <h3>Submit Application</h3>
+                        <p>Complete the online application form or download and submit the PDF version with required documents.</p>
+                    </div>
+
+                    <div class="step-circle animate-slide-up">
+                        <div class="step-number">2</div>
+                        <h3>Interview</h3>
+                        <p>Schedule an interview with our admissions committee to discuss your calling and goals.</p>
+                    </div>
+
+                    <div class="step-circle animate-slide-right">
+                        <div class="step-number">3</div>
+                        <h3>Receive Acceptance</h3>
+                        <p>Get your acceptance letter and enrollment package within 2-3 weeks of your interview.</p>
+                    </div>
+
+                    <div class="step-circle animate-slide-left">
+                        <div class="step-number">4</div>
+                        <h3>Pay Fees & Register</h3>
+                        <p>Complete registration by paying tuition fees and attending orientation.</p>
+                    </div>
+                </div>
+
+                <div class="admission-requirements animate-fade-up">
+                    <h3>General Requirements</h3>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-check-circle"></i> Completed secondary education (for certificate programs)</li>
+                        <li><i class="fas fa-check-circle"></i> Clear testimony of faith in Jesus Christ</li>
+                        <li><i class="fas fa-check-circle"></i> Recommendation from local church pastor</li>
+                        <li><i class="fas fa-check-circle"></i> Commitment to complete program requirements</li>
+                        <li><i class="fas fa-check-circle"></i> For degree programs: Diploma in Theology or equivalent</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuition & Fees -->
+    <section class="tuition-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Tuition & Financial Information</h2>
+                <p class="section-subtitle">Quality theological education at accessible rates</p>
+            </div>
+
+            <div class="tuition-grid">
+                <div class="tuition-card animate-slide-up">
+                    <div class="tuition-header">
+                        <h3>Certificate Program</h3>
+                        <div class="tuition-price">UGX 800,000<span>/year</span></div>
+                    </div>
+                    <ul class="tuition-features">
+                        <li><i class="fas fa-check"></i> 12 Courses Included</li>
+                        <li><i class="fas fa-check"></i> Study Materials</li>
+                        <li><i class="fas fa-check"></i> Library Access</li>
+                        <li><i class="fas fa-times"></i> Accommodation</li>
+                        <li><i class="fas fa-times"></i> Meals</li>
+                    </ul>
+                    <a href="#apply-certificate" class="btn btn-primary btn-block">
+                        Apply for This Program
+                    </a>
+                </div>
+
+                <div class="tuition-card featured animate-slide-up delay-1">
+                    <div class="tuition-badge">Most Popular</div>
+                    <div class="tuition-header">
+                        <h3>Diploma Program</h3>
+                        <div class="tuition-price">UGX 1,200,000<span>/year</span></div>
+                    </div>
+                    <ul class="tuition-features">
+                        <li><i class="fas fa-check"></i> 24 Courses Included</li>
+                        <li><i class="fas fa-check"></i> All Study Materials</li>
+                        <li><i class="fas fa-check"></i> Full Library Access</li>
+                        <li><i class="fas fa-check"></i> Ministry Practicum</li>
+                        <li><i class="fas fa-times"></i> Accommodation</li>
+                    </ul>
+                    <a href="#apply-diploma" class="btn btn-secondary btn-block">
+                        Apply for This Program
+                    </a>
+                </div>
+
+                <div class="tuition-card animate-slide-up delay-2">
+                    <div class="tuition-header">
+                        <h3>Degree Program</h3>
+                        <div class="tuition-price">UGX 1,800,000<span>/year</span></div>
+                    </div>
+                    <ul class="tuition-features">
+                        <li><i class="fas fa-check"></i> 36+ Courses</li>
+                        <li><i class="fas fa-check"></i> All Study Materials</li>
+                        <li><i class="fas fa-check"></i> Thesis Supervision</li>
+                        <li><i class="fas fa-check"></i> Ministry Internship</li>
+                        <li><i class="fas fa-check"></i> Career Counseling</li>
+                    </ul>
+                    <a href="#apply-degree" class="btn btn-primary btn-block">
+                        Apply for This Program
+                    </a>
+                </div>
+            </div>
+
+            <div class="financial-aid animate-fade-up">
+                <h3>Financial Aid & Scholarships</h3>
+                <p>VBI offers limited scholarships for outstanding students and those with financial need. Payment plans are available for all programs. Contact our admissions office for more information.</p>
+                <div class="aid-options">
+                    <div class="aid-option">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Scholarships Available</span>
+                    </div>
+                    <div class="aid-option">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Flexible Payment Plans</span>
+                    </div>
+                    <div class="aid-option">
+                        <i class="fas fa-church"></i>
+                        <span>Church Sponsorship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Now Section -->
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Start Your Journey at VBI</h2>
+                <p class="section-subtitle">Apply now for the next academic term</p>
+            </div>
+
+            <div class="apply-content">
+                <div class="apply-info animate-slide-left">
+                    <h3>Upcoming Intakes</h3>
+                    <div class="intake-dates">
+                        <div class="intake-date">
+                            <div class="intake-month">January</div>
+                            <div class="intake-details">
+                                <h4>Main Intake</h4>
+                                <p>Application Deadline: December 15</p>
+                                <p>Classes Start: January 20</p>
+                            </div>
+                        </div>
+                        <div class="intake-date">
+                            <div class="intake-month">May</div>
+                            <div class="intake-details">
+                                <h4>Mid-Year Intake</h4>
+                                <p>Application Deadline: April 15</p>
+                                <p>Classes Start: May 10</p>
+                            </div>
+                        </div>
+                        <div class="intake-date">
+                            <div class="intake-month">September</div>
+                            <div class="intake-details">
+                                <h4>Short Courses</h4>
+                                <p>Rolling Admissions</p>
+                                <p>Multiple Start Dates</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <h3>Admissions Office</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+256 706 254106</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>admissions@newtestamentevangelical.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kitintale, Portbell Road, Kampala</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon-Fri: 9AM-5PM, Sat: 9AM-1PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="apply-form animate-slide-right">
+                    <h3>Request Information</h3>
+                    <form id="vbiApplicationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Program of Interest</option>
+                                <option value="certificate">Certificate in Biblical Studies</option>
+                                <option value="diploma">Diploma in Theology & Ministry</option>
+                                <option value="degree">Bachelor of Theology</option>
+                                <option value="short">Short Courses</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your ministry goals and why you want to study at VBI..." rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>I agree to receive information about VBI programs</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submit Application Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Hear From Our Graduates</h2>
+                <p class="section-subtitle">Transformed lives impacting communities</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial active animate-slide-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"VBI gave me not just knowledge, but practical ministry skills. Today I pastor a growing church in Jinja, equipped with what I learned at Victory Bible Institute."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image" style="background-image: url('images/graduate-pastor.jpg');"></div>
+                        <div class="author-info">
+                            <h4>Rev. David Kigozi</h4>
+                            <p class="author-role">Class of 2018, Pastor in Jinja</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial animate-slide-up delay-1">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The biblical foundation I received at VBI transformed my approach to counseling. I now lead a Christian counseling center serving hundreds in our community."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image" style="background-image: url('images/graduate-counselor.jpg');"></div>
+                        <div class="author-info">
+                            <h4>Grace Nalwanga</h4>
+                            <p class="author-role">Class of 2020, Christian Counselor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial animate-slide-up delay-2">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"As a missionary in South Sudan, the missions training I received at VBI has been invaluable. The practical focus prepared me for real ministry challenges."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image" style="background-image: url('images/graduate-missionary.jpg');"></div>
+                        <div class="author-info">
+                            <h4>John Mugisha</h4>
+                            <p class="author-role">Class of 2019, Missionary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="vbi-faq-section">
+        <div class="container">
+            <div class="section-header animate-fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about studying at VBI</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item animate-slide-up">
+                    <div class="faq-question">
+                        <h3>Is VBI accredited?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Victory Bible Institute is accredited by the Uganda National Council for Higher Education and recognized by several international theological accrediting bodies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-slide-up delay-1">
+                    <div class="faq-question">
+                        <h3>What are the class schedules like?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible schedules including evening classes (6-9 PM) on weekdays and Saturday morning sessions to accommodate working professionals and active church members.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-slide-up delay-2">
+                    <div class="faq-question">
+                        <h3>Can I study online or part-time?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We currently offer in-person classes with plans to launch hybrid options. Part-time study is available for certificate and diploma programs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-slide-up">
+                    <div class="faq-question">
+                        <h3>What career paths do graduates pursue?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Graduates serve as pastors, missionaries, Christian educators, counselors, worship leaders, church administrators, and in various NGO roles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="vbi-footer-logo">
+                        <span class="vbi-logo-small">VBI</span>
+                        <div class="vbi-footer-name">
+                            <span>Victory Bible Institute</span>
+                            <span class="affiliation">of New Testament Evangelical Church</span>
+                        </div>
+                    </div>
+                    <div class="footer-text">
+                        <h3>Victory Bible Institute</h3>
+                        <p class="identity-line">Equipping Leaders, Transforming Nations</p>
+                        <p class="footer-tagline">Accredited theological education in Kampala since 2003.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#programs">Programs & Courses</a></li>
+                            <li><a href="#admission">Admissions</a></li>
+                            <li><a href="#tuition">Tuition & Fees</a></li>
+                            <li><a href="#faculty">Meet Our Faculty</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#catalog">Academic Catalog</a></li>
+                            <li><a href="#calendar">Academic Calendar</a></li>
+                            <li><a href="#library">Library Resources</a></li>
+                            <li><a href="#alumni">Alumni Network</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact VBI</h4>
+                        <div class="contact-mini">
+                            <p><i class="fas fa-phone"></i> +256 706 254106</p>
+                            <p><i class="fas fa-envelope"></i> vbi@newtestamentevangelical.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Kitintale, Kampala</p>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/EvangelicalKitintale" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://youtube.com/@newtestamentevangelicalchu8693?si=mDZGXb1qoIEl_plF" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Victory Bible Institute, New Testament Evangelical Church, Kampala (U). All rights reserved.</p>
+                <p class="seo-note">Bible school Kampala | Theological education Uganda | Ministry training | Victory Bible Institute | Accredited Bible college</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bible-school.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
