@@ -823,3 +823,237 @@
         padding: 0 1.5rem 1.5rem;
     }
         }
+
+/* Sermons & Media Page Responsive Styles */
+
+@media (max-width: 1200px) {
+    .sermons-hero-title {
+        font-size: 3rem;
+    }
+    
+    .sermons-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .live-stream-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .live-stream-player {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    
+    .featured-sermons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .youtube-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .sermons-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .sermons-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .sermons-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .youtube-stats {
+        gap: 3rem;
+    }
+    
+    .youtube-stat i {
+        font-size: 2.5rem;
+    }
+    
+    .youtube-stat .stat-number {
+        font-size: 2rem;
+    }
+    
+    .sermon-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .sermons-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .series-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sermons-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .sermons-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .sermons-hero-content {
+        padding: 1rem;
+    }
+    
+    .youtube-stats {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .youtube-stat {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .stat-content {
+        align-items: center;
+    }
+    
+    .placeholder-content i {
+        font-size: 3rem;
+    }
+    
+    .countdown {
+        gap: 1rem;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .sermon-actions {
+        flex-direction: column;
+    }
+    
+    .sidebar-sermon-card {
+        flex-direction: column;
+    }
+    
+    .sidebar-sermon-image {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .filter-options {
+        justify-content: center;
+    }
+    
+    .sort-select {
+        width: 100%;
+    }
+    
+    .sermons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .control-buttons {
+        justify-content: center;
+    }
+    
+    .volume-control {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .time-display {
+        order: 2;
+    }
+    
+    .player-actions {
+        flex-wrap: wrap;
+    }
+    
+    .share-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .sermons-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .sermons-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .youtube-stat .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .youtube-stat .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .countdown {
+        gap: 0.5rem;
+    }
+    
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+    
+    .featured-sermon-content {
+        padding: 1.5rem;
+    }
+    
+    .featured-sermon-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .sermon-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .filter-group h4 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .filter-options {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .sermon-card-meta {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .platform-icons {
+        gap: 1.5rem;
+    }
+    
+    .platform i {
+        font-size: 2rem;
+    }
+    
+    .share-options {
+        grid-template-columns: 1fr;
+    }
+            }
